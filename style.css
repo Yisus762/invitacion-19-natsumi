@@ -155,6 +155,6 @@ footer{margin-top:80px;font-size:.7rem;letter-spacing:.3em;color:var(--mute)}
   .beams { animation-duration: 150s; }
 
   /* 3. El mapa no debe trabar el scroll táctil */
-  .map iframe { height: 200px !important; pointer-events: none; }
+  .map iframe { height: 200px !important; }
   .map { position: relative; }
 }
