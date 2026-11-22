@@ -140,3 +140,21 @@ footer{margin-top:80px;font-size:.7rem;letter-spacing:.3em;color:var(--mute)}
   border: 1px solid rgba(255, 255, 255, 0.22);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.55);
 }
+/* ===== Optimización para celulares y pantallas táctiles ===== */
+@media (max-width: 768px) {
+  /* 1. Sin blur en tiempo real: fondo oscuro elegante en su lugar */
+  .glass, .mbtn {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  .glass { background: rgba(18, 18, 22, 0.92) !important; }
+
+  /* 2. Esferas y fondo más ligeros para la GPU */
+  .ball { filter: none !important; will-change: transform; }
+  .aurora { filter: none; animation: none; }
+  .beams { animation-duration: 150s; }
+
+  /* 3. El mapa no debe trabar el scroll táctil */
+  .map iframe { height: 200px !important; pointer-events: none; }
+  .map { position: relative; }
+}
