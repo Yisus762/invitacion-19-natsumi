@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mis 19 Años · Natsumi</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="lock">
+<div class="aurora"></div><div class="beams"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="gs" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#9fd3ff"/><stop offset="1" stop-color="#4f7fe0"/></linearGradient></defs></svg>
+<canvas id="fx"></canvas>
+<div class="ball b1"></div><div class="ball b2"></div><div class="ball b3"></div>
+
+<!-- MÚSICA: coloca el archivo "love-songs-bonus-kaash-paige.mp3" dentro de la carpeta "audio/" (la carpeta debe estar al lado de index.html).
+     Ruta final: audio/love-songs-bonus-kaash-paige.mp3.mpeg -->
+<audio id="audio" loop preload="auto" src="audio/love-songs-bonus-kaash-paige.mp3.mpeg"></audio>
+<button id="mbtn" class="mbtn paused" type="button" title="Love Songs - Bonus · Kaash Paige" aria-pressed="false"><span class="eq"><i></i><i></i><i></i><i></i></span><span class="tx"><b id="mtxt">♪ Música: OFF</b><small>Love Songs - Bonus · Kaash Paige</small></span></button>
+<div id="toast" class="toast"></div>
+
+<section id="intro">
+  <div class="spot s1"></div><div class="spot s2"></div>
+  <div class="ball ab hang"></div>
+  
+  <div class="kicker">✦ Tienes una invitación ✦</div>
+  <div class="scene"><div class="env" id="env">
+    <div class="back"></div>
+    <div class="card"><div class="ci"><small>Te invito a mis</small><b>19</b><span>Años</span><i></i><em>Natsumi</em><small>15 · 01 · 2027</small></div></div>
+    <div class="front"></div>
+    <svg class="folds" viewBox="0 0 360 240" preserveAspectRatio="none"><polygon points="0,0 180,132 0,240" fill="rgba(255,255,255,.05)"/><polygon points="360,0 180,132 360,240" fill="rgba(0,0,0,.28)"/><polygon points="0,240 180,132 360,240" fill="rgba(255,255,255,.08)"/><path d="M0 242L180 134L360 242" fill="none" stroke="#000" stroke-opacity=".5" stroke-width="2.5"/><path d="M0 240L180 132L360 240M0 0L180 132L360 0" fill="none" stroke="#cfd3da" stroke-opacity=".6" stroke-width="1.2"/></svg>
+    <div class="flap"></div>
+    <div class="seal">19</div>
+  </div></div>
+  <div class="cta"><p class="hint">Toca el sello para abrir</p><button id="go" class="go" type="button">Ver invitación <span>↓</span></button></div>
+</section>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="spot s1"></div><div class="spot s2"></div>
+    <div class="ball ab hang"></div>
+    <svg class="ring" viewBox="0 0 300 300" aria-hidden="true"><defs><path id="cp" d="M150,150 m-122,0 a122,122 0 1,1 244,0 a122,122 0 1,1 -244,0"/></defs><text textLength="760" lengthAdjust="spacing"><textPath href="#cp" textLength="760" lengthAdjust="spacing">NATSUMI ✦ MIS 19 AÑOS ✦ 15 · 01 · 2027 ✦ NOCHE DE GALA ✦ </textPath></text></svg>
+    <div class="kicker">Estás invitado a celebrar</div>
+    <h1 class="metal">Mis 19 Años</h1>
+    <div class="name">Natsumi Ivanova Miguel Palacios</div>
+    <p class="lead">Una noche de luces, música y recuerdos brillantes. Será un honor compartirla contigo.</p>
+    <div class="badge"><small>Viernes</small><b>15</b><span>Enero · 2027</span><em>8:00 PM</em></div>
+    <div class="chips"><span>✦ Gala nocturna</span><span>✦ DJ en vivo</span><span>✦ Hora loca</span></div>
+    <div class="scroll">Desliza ↓</div>
+  </section>
+
+  <!-- CONTADOR -->
+  <section class="rv">
+    <div class="glass"><h2>Cuenta regresiva</h2>
+      <div class="cd">
+        <div><b id="d">00</b><small>Días</small></div><div><b id="h">00</b><small>Horas</small></div>
+        <div><b id="m">00</b><small>Min</small></div><div><b id="s">00</b><small>Seg</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETALLES -->
+  <section class="rv">
+    <div class="glass"><h2>Detalles</h2>
+      <div class="row"><span>Fecha</span><b>Viernes 15 de enero, 2027</b></div>
+      <div class="row"><span>Hora</span><b>8:00 PM</b></div>
+      <div class="row"><span>Lugar</span><b>Huando, Huaral</b></div>
+      <div class="row"><span>Vestimenta</span><b>Gala nocturna</b></div>
+    </div>
+  </section>
+
+  <!-- ITINERARIO -->
+  <section class="sec rv">
+    <div class="ball ab a3"></div><div class="kicker">La noche</div><h2 class="big">Itinerario</h2>
+    <div class="tl">
+      <div class="it rv"><i></i><div class="glass"><b class="serif">8:00 PM</b><h3>Recepción y Alfombra Roja</h3><p>Fotos de bienvenida.</p></div></div>
+      <div class="it rv"><i></i><div class="glass"><b class="serif">9:30 PM</b><h3>Brindis de Honor</h3><p>Palabras especiales.</p></div></div>
+      <div class="it rv"><i></i><div class="glass"><b class="serif">10:30 PM</b><h3>Cena / Bocaditos Gourmet</h3><p>Sabores para la ocasión.</p></div></div>
+      <div class="it rv"><i></i><div class="glass"><b class="serif">11:30 PM</b><h3>Hora Loca, DJ y Pista</h3><p>Bailamos hasta el amanecer.</p></div></div>
+    </div>
+  </section>
+
+  <!-- UBICACIÓN -->
+  <section class="sec rv">
+    <div class="ball ab a1"></div>
+    <div class="kicker">Cómo llegar</div><h2 class="big">Ubicación</h2>
+    <div class="glass">
+      <h3 class="serif">Huando – Local de Eventos</h3> <!-- EDITAR: nombre exacto del local -->
+      <p>Huando, Huaral - Lima, Perú</p> <!-- EDITAR: dirección -->
+      <p class="mute">Referencia: agrega aquí una referencia para llegar.</p> <!-- EDITAR: referencia -->
+      <div class="map"><iframe loading="lazy" title="Mapa" src="https://www.google.com/maps?q=Huando,+Huaral,+Lima,+Peru&output=embed"></iframe></div>
+      <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Huando,+Huaral,+Lima,+Peru">Abrir en Google Maps</a>
+      <a class="btn" target="_blank" rel="noopener" href="https://m.uber.com/ul/?action=setPref&dropoff[formatted_address]=Huando%2C%20Huaral%2C%20Lima%2C%20Peru">Pedir Uber / InDrive</a>
+    </div>
+  </section>
+
+  <!-- DRESS CODE -->
+  <section class="sec rv">
+    <div class="ball ab a4"></div><div class="kicker">Dress code</div><h2 class="big">Gala Nocturna</h2>
+    <div class="glass">
+      <p>Elegante, sofisticado y con brillo. Esta noche el negro, el azul y el plateado mandan.</p>
+      <div class="dots">
+        <div><span style="background:#0a0a0c"></span>Negro</div><div><span style="background:linear-gradient(135deg,#fff,#9ea4ae)"></span>Plateado</div>
+        <div><span style="background:#3b3f47"></span>Gris Oxford</div><div><span style="background:linear-gradient(135deg,#7f9bff,#0a14d8 55%,#00006a)"></span>Azul</div>
+      </div>
+      <p class="warn">✕ Evitar tonos neón</p>
+      <button class="btn acc" data-t="outfit">Ideas de Outfit</button>
+      <div class="panel" id="outfit">
+        <h4>Mujeres</h4><div class="fits"><div class="g"><svg viewBox="0 0 64 64" fill="none" stroke="#e8f1ff" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M24 5l4 11h8l4-11M28 16l-3 14-14 28h42L39 30l-3-14z" fill="url(#gs)" fill-opacity=".45"/><path d="M25 30h14M20 44c8 4 16 4 24 0"/></svg><span>Vestido largo</span></div><div class="g"><svg viewBox="0 0 64 64" fill="none" stroke="#e8f1ff" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M6 46c0-4 6-6 12-8l12-8c4-4 10-6 16-6h6c2 0 2 4 0 6l-4 6-2 20h-4l1-14c-8 2-16 4-24 6-8 2-13 2-13-2z" fill="url(#gs)" fill-opacity=".45"/><path d="M30 30c3 5 8 8 15 8"/></svg><span>Tacones</span></div><div class="g"><svg viewBox="0 0 64 64" fill="none" stroke="#e8f1ff" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 12c0 22 12 30 20 30s20-8 20-30"/><path d="M32 42l-6-6 4-7h4l4 7z" fill="url(#gs)"/></svg><span>Collar plateado</span></div><div class="g"><svg viewBox="0 0 64 64" fill="none" stroke="#e8f1ff" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><rect x="8" y="24" width="48" height="28" rx="7" fill="url(#gs)" fill-opacity=".45"/><path d="M8 32c14 10 34 10 48 0"/><circle cx="32" cy="40" r="3" fill="url(#gs)"/></svg><span>Clutch</span></div></div>
+        <h4>Hombres</h4><div class="fits"><div class="g"><svg viewBox="0 0 64 64" fill="none" stroke="#e8f1ff" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M22 6l10 14 10-14 16 10-4 42H10L6 16z" fill="url(#gs)" fill-opacity=".45"/><path d="M22 6l10 30 10-30M32 36v22"/><circle cx="32" cy="46" r="1.6" fill="#fff"/></svg><span>Traje o blazer</span></div><div class="g"><svg viewBox="0 0 64 64" fill="none" stroke="#e8f1ff" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M22 8l10 6 10-6 16 10-6 10-6-4v36H18V24l-6 4-6-10z" fill="url(#gs)" fill-opacity=".45"/><path d="M22 8l10 14 10-14M32 22v34"/></svg><span>Camisa</span></div><div class="g"><svg viewBox="0 0 64 64" fill="none" stroke="#e8f1ff" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M6 38c0-6 8-6 12-10l8-6c4 5 12 5 18 11 7 3 14 6 14 12v5H6z" fill="url(#gs)" fill-opacity=".45"/><path d="M6 50h52M26 22l6 7M32 24l6 7"/></svg><span>Zapatos formales</span></div><div class="g"><svg viewBox="0 0 64 64" fill="none" stroke="#e8f1ff" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M32 30L8 18v26l24-12 24 12V18z" fill="url(#gs)"/><rect x="27" y="25" width="10" height="12" rx="3" fill="url(#gs)"/></svg><span>Pajarita plateada</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGALOS -->
+  <section class="sec rv">
+    <div class="ball ab a2"></div>
+    <div class="kicker">Con cariño</div><h2 class="big">Mesa de Regalos</h2>
+    <div class="glass">
+      <h3 class="serif">Regalo físico</h3>
+      <p class="mute">Si prefieres regalar algo, aquí van ideas.</p>
+      <div class="gifts">
+        <div class="g"><svg viewBox="0 0 64 64" fill="none" stroke="#e8f1ff" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><rect x="25" y="5" width="14" height="9" rx="2" fill="url(#gs)"/><rect x="29" y="14" width="6" height="6" fill="url(#gs)"/><rect x="14" y="20" width="36" height="39" rx="9" fill="url(#gs)" fill-opacity=".4"/><rect x="23" y="33" width="18" height="13" rx="3"/><path d="M53 8l1.6 3.4 3.4 1.6-3.4 1.6L53 18l-1.6-3.4L48 13l3.4-1.6z" fill="#fff" stroke="none"/></svg><span>Perfumes</span></div>
+        <div class="g"><svg viewBox="0 0 64 64" fill="none" stroke="#e8f1ff" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><circle cx="32" cy="42" r="14"/><path d="M22 20l5-9h10l5 9-10 12z" fill="url(#gs)"/><path d="M22 20h20M27 11l5 9 5-9M32 20v12"/></svg><span>Accesorios plateados</span></div>
+        <div class="g"><svg viewBox="0 0 64 64" fill="none" stroke="#e8f1ff" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M24 5l4 11h8l4-11M28 16l-4 14-12 28h40L40 30l-4-14z" fill="url(#gs)" fill-opacity=".45"/><path d="M24 30h16"/></svg><span>Ropa</span></div>
+        <div class="g"><svg viewBox="0 0 64 64" fill="none" stroke="#e8f1ff" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><rect x="21" y="34" width="22" height="24" rx="3" fill="url(#gs)" fill-opacity=".45"/><rect x="24" y="25" width="16" height="9" fill="url(#gs)"/><path d="M26 25V14l12-6v17z" fill="url(#gs)"/></svg><span>Maquillaje</span></div>
+        <div class="g"><svg viewBox="0 0 64 64" fill="none" stroke="#e8f1ff" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><rect x="11" y="28" width="42" height="28" rx="3" fill="url(#gs)" fill-opacity=".45"/><rect x="8" y="19" width="48" height="10" rx="3" fill="url(#gs)"/><path d="M32 19v37M32 19c-5-10-16-8-12-2 3 4 12 2 12 2s9 2 12-2c4-6-7-8-12 2z"/><path d="M54 6l1.6 3.4 3.4 1.6-3.4 1.6L54 16l-1.6-3.4L49 11l3.4-1.6z" fill="#fff" stroke="none"/></svg><span>Detalles sorpresa</span></div>
+      </div>
+    </div>
+    <div class="glass shine">
+      <h3 class="serif">Lluvia de sobres · Yape / Plin</h3>
+      <div class="num" id="yape">+51 929 640 916</div> <!-- EDITAR: número de Yape/Plin -->
+      <p class="mute">A nombre de Natsumi Miguel</p>
+      <button class="btn" id="copy">Copiar número</button>
+    </div>
+  </section>
+
+  <!-- PLAYLIST -->
+  <section class="sec rv">
+    <div class="ball ab a5"></div><div class="kicker">Tú pones la música</div><h2 class="big">Pide tu Canción</h2>
+    <div class="glass">
+      <p>¿Qué canción no puede faltar esa noche?</p>
+      <input class="in" id="song" placeholder="Canción – Artista" maxlength="80">
+      <button class="btn" id="addsong">Añadir a la playlist</button>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="sec rv">
+    <div class="kicker">Confirma</div><h2 class="big">Asistencia</h2>
+    <form class="glass" id="rsvp" autocomplete="off">
+      <label>Nombre completo<input class="in" id="nom" required placeholder="Tu nombre"></label>
+      <label>¿Asistirás?<select class="in" id="asi"><option>¡Sí, ahí estaré!</option><option>No podré asistir</option></select></label>
+      <label>¿Qué tipo de regalo llevarás?<select class="in" id="reg"><option>Regalo sorpresa</option><option>Perfume/Accesorio</option><option>Lluvia de sobres / Yape</option><option>Otro</option></select></label>
+      <label>Canción sugerida<input class="in" id="song2" placeholder="Canción – Artista" maxlength="80"></label>
+      <button class="btn" type="submit">Confirmar Asistencia por WhatsApp</button>
+    </form>
+  </section>
+
+  <footer>N · 19 · 2027</footer>
+  <footer>CREADO POR:jesusparedesvega07@gmail.com</footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
